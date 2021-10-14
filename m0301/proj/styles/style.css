@@ -23,15 +23,24 @@ Font size: TODO!!
     padding:0;
     box-sizing:border-box;
 }
-
     
 html{                
     font-size:100%; /*asegurar el tamaña de fuente*/
     /*font-family: fuenteCorp1wf;*/
 }
-
+._container._xtab {
+    
+    flex-direction: column;
+    
+    height:100vh;
+    width:100%;
+    height:100vh;    
+    padding:2.5vh 5vh;
+}
 ._container{
-    /*TEMPORAL!!*/    
+    /*TEMPORAL!!*/ 
+    /*text-align:center;
+    justify-content: center;*/
     background:url("../zzimages/psd.png");
     /*TEMPORAL!!*/
     background-position: 0 0vh;
@@ -43,25 +52,281 @@ html{
     background-size:contain;
     height:280vh;    
     display:grid;*/
-}
-/* LAyouts for griditems */
-._container>._itemflex
-{
-    display:flex;
+        
+    /*display: flex;*/
+    
 }
 
-._item11x{            
-            grid-area: _gcnormal_1;
-            flex-direction:column;
-            justify-content: center;
-            align-items:center;            
-        }
-        ._item11x > *{
-            margin: 0.5rem 0rem;
-        }
-        
-        ._item22x{
-            grid-area: _gcnormal_2;
-            padding: 0 2rem;
-            
-        }
+header._cab_principal{
+    /*font-size:100%;*/
+    width:100%;
+    /*height:8.25vh;*/
+    height:42.5vh;
+    background: black;
+    margin:0vh 0vh;
+    padding:5vh 5vh 5vh 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* La especificidad del tag "._container._xtab" header Tiene mas prioridad que la etiqueta <header>! Utlizo id's!!
+*/
+#_cabecera_principal{
+    
+}
+
+/*La cabecera principal es una celda de la tabla*/
+#_celda_cabecera_principal{
+}
+
+header._cab_principal > ._celda_cabeceras_principales
+{
+  flex-direction: column;
+    width:100%;
+    height:42.5vh;
+    background:black;
+    margin:0vh 0vh;
+    padding:0vh 0vh 0vh 0vh;
+    justify-content: center;
+    align-items: center;    
+}
+._xd._celda_cabeceras_principales{
+   
+}
+
+._principal1{
+    background:green;
+}
+
+/* Agrupación de elementos de la cabecera,
+LA Precedencia de FILA DE TABLA gana!*/
+header ._celda_cabeceras_principales > div._grup_ccabs_princpls{
+    background: black; 
+    margin:0vh; 
+    padding:0vh;
+}
+
+._xtab div._xr._grup_ccabs_princpls{  
+    width:100%;
+    height:32.5vh;        
+    justify-content: center;
+    align-items: center;  
+    align-content:space-between;        
+}
+._grup_ccabs_princpls{
+
+}
+
+/*
+ nav es una celda dentro del grupo de celdas de la cabecera principal.
+ nav también crear otra flex/tabla agrupada
+*/
+header ._celda_cabeceras_principales div._grup_ccabs_princpls > div._grup_nav{
+    margin:0vh;
+    background: black;
+}
+
+._xtab div._xr._grup_ccabs_princpls div._grup_nav{
+   flex-direction: column;
+    width:100%;
+    height:32.5vh;    
+    justify-content:flex-start;
+    align-items:flex-start;
+    align-content:space-between;
+}
+
+header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._nav_agrup1{
+    background:#44465E;
+    margin: 0vh 0vh 2.5vh 0vh;    
+}
+
+._nav_agrup1{
+    
+}
+
+._xtab div._xr ._nav_agrup1{
+    width:100%;
+    height: 15vh;
+    justify-content: space-around;
+    align-items: center;    
+
+}
+
+/*
+ La fila de la tabla que define el primer grupo nav
+*/
+._xtab div._xr nav ._nav_agrup1{
+    width:100%;
+    height:15vh;
+    background:#44465E;
+    justify-content: space-between;
+    align-items: center;
+    margin:0vh;
+    padding: 0vh 0vh;
+    border-color: black;
+}
+
+/*
+hijos de la "AgrupaciónNav", con caracteristicas comunes o diferentes
+*/
+._xtab div._xr ._nav_agrup1 div._xd{
+   width:10%; 
+    height:5vh;
+    background:#EA584B; 
+}
+._xtab div._xr ._nav_agrup1 div._logo{   
+    height:5vh;
+    background:#EA584B;
+}
+/*
+también es hijo de la "AgrupaciónNav"
+*/
+nav{
+    width:40%;
+    height:5vh;
+    background:#EA584B;  
+}
+/*
+-------------
+Siguiente fila de header
+*/
+header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._agrup2{
+    background: #F0763A;
+}
+/*
+
+*/
+._xtab div._xr._grup_ccabs_princpls div._agrup2{
+   flex-direction: column;
+    width:100%;
+    height:15vh;
+    padding: 0vh 0vh 0vh 0vh;
+    justify-content:space-around;
+    align-items:center;
+    align-content:space-around;    
+}
+
+._xtab div._xr ._agrup2 div._xd{
+   width:90%; 
+    margin:0vh;
+    height:5vh;
+    
+    background:#FFCC5E; 
+}
+._xtab div._xr ._nav_agrup div._logo{   
+
+}
+
+/* -------------
+Sección central: Fila precedente de la tabla del container */
+._xr._prin_inform{
+    flex-direction: column;
+    width:100%;
+    height:72.5vh; /* 10 padding + 40vh _centralsup+22.5vh _centralinf*/
+    margin: 5vh 0vh;  
+    padding:5vh 5vh 5vh 5vh;
+    justify-content: center;
+    align-items: center;
+}
+main._prin_inform{
+  
+    /*padding:5vh 5vh 5vh 5vh;*/
+    background:yellow;  
+}
+/* Todas las secciones|tablas hijas de main (superior/inferior) dispuestas en columna con espacio intermedio*/
+main > section._xd._xtab{
+    flex-direction: column;
+    justify-content: space-between;
+}
+._xtab div._xr._centralsup{
+    
+}
+section._centralsup{
+    width:100%;
+    height:35vh;    
+    background:#44465E;  
+    padding:5vh;
+    margin: 0vh 0vh 5vh 0vh;
+    
+}
+section._centralinf{
+  width:100%;
+    height:22.5vh;
+    padding:5vh;
+    background:#EA584B;        
+}
+/*
+Características cómunes de disposición entre estas secciones|filas
+*/
+._xr._art1{
+   width:100%;
+    height:5vh;
+    background:#44465E;
+    /*margin:0vh 5vh 0vh 0vh; */
+    /*padding:0vh 5vh 0vh 5vh;*/
+    justify-content: space-around;
+    align-items: center; 
+}
+/* Características cómunes de disposición entre contenido|columnas*/
+._xr._art1 > ._xd{
+    width:15%; 
+    height:5vh;
+    background:#1664A4;
+}
+/*Columna resaltada*/
+section._centralsup ._xd._resaltado1{
+    width:100%; 
+    background:#6399BB;
+}
+/*
+Sección central inferior
+*/
+/*
+Características cómunes de disposición entre estas secciones|filas
+*/
+._xr._art2{
+   width:100%;
+    height:35vh;
+    background:#F94C47;
+    margin:0vh; 
+    padding:0vh 0vh 0vh 0vh;
+    justify-content: space-between;
+    align-items: center; 
+}
+/* Características cómunes de disposición entre contenido|columnas*/
+._xr._art2 > ._xd{
+    width:100%; 
+    height:5vh;
+    background:#FFE380;
+}
+/*
+
+*/
+section._centralinf ._espacioextr{
+    height: 7.5vh;
+    padding: 0vh 0vh 2.5vh 0vh;
+}
+
+
+/*
+-------------
+Pie de página */
+._xr footer{
+    
+}
+footer._piepagprinc{
+    flex-direction: column;
+    width:100%;
+    height:15vh; /* 10 padding + 5vh*/
+    margin: 0vh 0vh;  
+    padding:5vh 5vh 5vh 5vh;
+    justify-content: center;
+    align-items: center;   
+    background:black;    
+}
+
+footer._piepagprinc div{
+    width:100%;
+    height:5vh;
+    background: #E4A434;
+}
