@@ -1,0 +1,102 @@
+    /*
+    Flexbox layout custom style based on the HTML-Table   language
+    12-column
+    table
+        tr
+            td-td-td
+
+
+<div class="_xtab">
+    <div class="_xr">
+        <div class=_xd">
+        </div>
+    </div>
+</div>
+or Ad infinitum ...
+<div class="_xtab">
+    <div class="_xr">
+        <div class=_xd _xtab">
+            <div class="_xr">
+                <div class=_xd _xtab">
+                    <....
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ + TODO: colspan[1-12] complete description on each column
+
+    combined with HTML5-semantics: headeer nav section article
+*/
+._xd._xtab{
+    display: inline-flex;   
+    flex-direction:row;    
+}
+._xtab
+{
+    display: flex;   
+    flex-direction:column;    
+}
+._xr{
+    display: inline-flex;   
+    flex-direction:row;    
+}
+
+/*Responsive imposible todo en columna*/
+@media screen and (min-width:180px) 
+and (max-width:200px){
+    
+ ._xr, ._xtab div,._xtab header,._xtab nav,._xtab section,._xtab article{
+    background: rgba(0,255,0,25%);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:auto;
+}
+}
+
+/* NOT AN ERROR!!This selector will force the user to 
+assign the layout using the "_xr" and "_xd" class to
+conform to this layout specification, and adjusting the width/height/background according to HIS design
+*/
+._xtab>*
+{
+    background:red;
+    width:10000%;
+    height:10000vh;
+}
+/*The user has to force these DIV's strict combinations!!
+
+<div class="_xtab">
+    <div class="_xr">
+        <div class=_xd">
+        </div>
+    </div>
+</div>
+or Ad infinitum ...
+<div class="_xtab">
+    <div class="_xr">
+        <div class=_xd _xtab">
+            <div class="_xr">
+                <div class=_xd _xtab">
+                    <....
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+---
+*/
+._xtab div._xr{        
+    background: rgba(0,255,0,25%);
+    
+    height:auto;    
+}
+._xtab div._xr div._xd{
+    height:auto;    
+}
+
+/*resolution*/
+._xd
+{ 
+}

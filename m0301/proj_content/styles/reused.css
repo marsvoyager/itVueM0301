@@ -1,0 +1,129 @@
+
+@font-face {
+    font-family: fuenteCorp1wf;
+    
+    src: url('../fonts/raleway-light-webfont.woff');
+}
+@font-face {
+    font-family: fuenteCorpLogo1wf;
+    src: url('../fonts/ubuntu-c-webfont.woff');
+}
+@font-face {
+    font-family: fuenteCorp1wf2;
+    src: url('../fonts/fontawesome-webfont.woff2');
+}
+@font-face {
+    font-family: fuenteCorpotf;
+    src: url('../fonts/FontAwesome.otf');
+}
+
+html{                
+    font-size:100%; /*asegurar el tamaña de fuente*/
+    /*font-family: fuenteCorp1wf;*/
+    font-family: fuenteCorp1wf;
+}
+/*--------------------------------------------
+/*begin responsive mobile*/
+@media screen and (min-width: 280px) and (max-width: 512px){
+    html{                
+    font-size:25%; /*asegurar el tamaña de fuente*/
+    /*font-family: fuenteCorp1wf;*/
+    font-family: fuenteCorp1wf;
+}
+}
+/*begin responsive tablet*/
+@media screen and (min-width: 800px) and (max-width: 810px){
+        html{                
+    font-size:35%; /*asegurar el tamaña de fuente*/
+    /*font-family: fuenteCorp1wf;*/
+    font-family: fuenteCorp1wf;
+}
+}
+button{
+    font-family: fuenteCorp1wf;
+    
+}
+
+a {
+    text-decoration: none;
+    
+}
+a img {
+    border: none;    
+}
+/*
+ Alinear manualmente los divs y dejar el último hijo con una
+medida a mano
+*/
+nav .navitems{    
+    /*left:0;*/
+    
+    float:left; 
+    height:100%;
+    width:20%;
+    
+    /*padding: 0 3vw 0;*/
+    /*margin: 0 calc(0.01%) 0vw calc(0.01%);*/
+    /*margin: 0 calc(1vw/3) 0 0;*/
+    padding: 0.5vh 2vw;
+}
+nav .navitems:last-child{    
+    /*left:0;*/
+    float:left; 
+    height:100%;
+    width:20%;
+    
+    /*padding: 0 3vw 0;*/
+    /*margin: 0 calc(0.01%) 0vw calc(0.01%);*/
+   /* margin: 0 0 0 0; */
+    
+}
+nav .navitems:hover{
+    background: #E6E7E9;
+}
+/* Botones sociales en la cabecera, alineados flotantes
+de derecha a izquierda, usando el redondeo 
+para dar efecto esférico*/
+
+header .dotpoint{
+    float: right;
+    /*top: calc(10%);
+    left:0;   
+    background:white;*/
+    
+    /*height: calc(50%);
+    width: calc(4%) ;*/
+    height: 100%;
+    width: 10%;
+    margin: 2vh 1vw;
+    border-radius: 100px; 
+   /* background-position: 0 0;
+    background:url("../img/pp_logo120x73.png") no-repeat center;
+    background-size: auto;*/
+
+}
+header .soc_tw{
+     background-position: 0 0;
+    background: url(../img/twitter.png) no-repeat center;
+    background-size: auto;  
+    border-color:#4B4B4D;
+}
+header .soc_fb{
+    background: url(../img/facebook.png) no-repeat center;
+    background-size: auto;  
+    border-color:#4B4B4D;
+}
+header .soc_in{
+    /*height: calc(100%);
+    width: calc(100%);
+    border-style: none;
+    margin: auto;*/
+    background: url(../img/linkedin.png) no-repeat center;
+    background-size: auto;      
+}
+
+._VioSemitransText{
+    background-color: rgba(0,0,0,0.0) !important;
+    color: rgba(0,0,0,0.5);
+    
+}
