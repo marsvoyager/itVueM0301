@@ -42,6 +42,19 @@ or Ad infinitum ...
     flex-direction:row;    
 }
 
+/*Responsive imposible todo en columna*/
+@media screen and (min-width:180px) 
+and (max-width:200px){
+    
+ ._xr, ._xtab div,._xtab header,._xtab nav,._xtab section,._xtab article{
+    background: rgba(0,255,0,25%);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:auto;
+}
+}
+
 /* NOT AN ERROR!!This selector will force the user to 
 assign the layout using the "_xr" and "_xd" class to
 conform to this layout specification, and adjusting the width/height/background according to HIS design

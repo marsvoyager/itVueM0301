@@ -28,15 +28,20 @@ html{
     font-size:100%; /*asegurar el tamaña de fuente*/
     /*font-family: fuenteCorp1wf;*/
 }
-._container._xtab {
-    
-    flex-direction: column;
-    
-    height:100vh;
-    width:100%;
-    height:100vh;    
-    padding:2.5vh 5vh;
+
+/*begin responsive mobile
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*/
+@media screen and (min-width: 280px) and (max-width: 512px){
 }
+/*end responsive mobile*/
+
+/*begin responsive tablet*/
+@media screen and (min-width: 800px) and (max-width: 810px){
+}
+/*end responsive tablet*/
+
+
 ._container{
     /*TEMPORAL!!*/ 
     /*text-align:center;
@@ -56,9 +61,19 @@ html{
     /*display: flex;*/
     
 }
+._container._xtab {    
+    flex-direction: column;
+    
+    height:100vh;
+    width:100%;
+    
+    padding:2.5vh 5vh;
+}
 
-header._cab_principal{
-    /*font-size:100%;*/
+/* La especificidad del tag "._container._xtab" header Tiene mas prioridad que la etiqueta <header>! Creo otra definición de tags para ser mas específico
+*/
+
+header._cab_principal{    
     width:100%;
     /*height:8.25vh;*/
     height:42.5vh;
@@ -67,16 +82,6 @@ header._cab_principal{
     padding:5vh 5vh 5vh 5vh;
     justify-content: center;
     align-items: center;
-}
-
-/* La especificidad del tag "._container._xtab" header Tiene mas prioridad que la etiqueta <header>! Utlizo id's!!
-*/
-#_cabecera_principal{
-    
-}
-
-/*La cabecera principal es una celda de la tabla*/
-#_celda_cabecera_principal{
 }
 
 header._cab_principal > ._celda_cabeceras_principales
@@ -90,9 +95,7 @@ header._cab_principal > ._celda_cabeceras_principales
     justify-content: center;
     align-items: center;    
 }
-._xd._celda_cabeceras_principales{
-   
-}
+
 
 ._principal1{
     background:green;
@@ -106,15 +109,13 @@ header ._celda_cabeceras_principales > div._grup_ccabs_princpls{
     padding:0vh;
 }
 
+
 ._xtab div._xr._grup_ccabs_princpls{  
     width:100%;
     height:32.5vh;        
     justify-content: center;
     align-items: center;  
     align-content:space-between;        
-}
-._grup_ccabs_princpls{
-
 }
 
 /*
@@ -140,16 +141,12 @@ header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._
     margin: 0vh 0vh 2.5vh 0vh;    
 }
 
-._nav_agrup1{
-    
-}
 
 ._xtab div._xr ._nav_agrup1{
     width:100%;
     height: 15vh;
     justify-content: space-around;
-    align-items: center;    
-
+    align-items: center;
 }
 
 /*
@@ -170,7 +167,7 @@ header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._
 hijos de la "AgrupaciónNav", con caracteristicas comunes o diferentes
 */
 ._xtab div._xr ._nav_agrup1 div._xd{
-   width:10%; 
+   width:15%; 
     height:5vh;
     background:#EA584B; 
 }
@@ -181,11 +178,12 @@ hijos de la "AgrupaciónNav", con caracteristicas comunes o diferentes
 /*
 también es hijo de la "AgrupaciónNav"
 */
-nav{
+header._cab_principal nav{
     width:40%;
     height:5vh;
     background:#EA584B;  
 }
+
 /*
 -------------
 Siguiente fila de header
@@ -193,6 +191,7 @@ Siguiente fila de header
 header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._agrup2{
     background: #F0763A;
 }
+
 /*
 
 */
@@ -206,6 +205,7 @@ header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._
     align-content:space-around;    
 }
 
+
 ._xtab div._xr ._agrup2 div._xd{
    width:90%; 
     margin:0vh;
@@ -213,48 +213,253 @@ header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._
     
     background:#FFCC5E; 
 }
-._xtab div._xr ._nav_agrup div._logo{   
 
+._xtab div._xr ._nav_agrup div._logo{   
 }
 
-/* -------------
-Sección central: Fila precedente de la tabla del container */
-._xr._prin_inform{
-    flex-direction: column;
+
+/*begin responsive mobile
+*/
+@media screen and (min-width: 280px) and (max-width: 512px)
+{
+    
+._container._xtab { 
+    
+    height:100vh;
+    padding:2.5vh 2.5vh;
+    }
+
+header._cab_principal{    
     width:100%;
-    height:72.5vh; /* 10 padding + 40vh _centralsup+22.5vh _centralinf*/
-   
+    /*height:8.25vh;*/
+    height:21.25vh;
+    padding:2.5vh 2.5vh 2.5vh 2.5vh;
     justify-content: center;
     align-items: center;
 }
-main._prin_inform{  
-    /*padding:5vh 5vh 5vh 5vh;*/
-    background:yellow; 
-     margin: 5vh 0vh;  
-    padding:5vh 5vh 5vh 5vh;
+    
+header._cab_principal > ._celda_cabeceras_principales
+{
+    width:100%;
+    /*height:42.5vh;*/
+    height:11.5vh;
+}    
+
+._xtab div._xr._grup_ccabs_princpls{  
+    width:100%;
+    height:17.25vh;        
+    justify-content: center;
+    align-items: center;  
+    align-content:space-between;        
+}    
+
+._xtab div._xr._grup_ccabs_princpls div._grup_nav{
+   flex-direction: column;
+    width:100%;
+    height:17.25vh;    
+    justify-content:flex-start;
+    align-items:flex-start;
+    align-content:space-between;
+}
+
+header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._nav_agrup1{
+    background:#44465E;
+    margin: 0vh 0vh 1.25vh 0vh;    
+}
+._xtab div._xr ._nav_agrup1{
+    width:100%;
+    height: 7.5vh;
+    justify-content: space-around;
+    align-items: center;
+}
+._xtab div._xr nav ._nav_agrup1{
+    width:100%;
+    height:7.5vh;
+    background:#44465E;
+    justify-content: space-between;
+    align-items: center;
+    margin:0vh;
+    padding: 0vh 0vh;
+    border-color: black;
+}    
+._xtab div._xr ._nav_agrup1 div._xd{
+    height:2.5vh;    
+}
+._xtab div._xr ._nav_agrup1 div._logo{   
+    height:2.5vh;
+}
+header._cab_principal nav{
+    width:40%;
+    height:2.5vh;
+    background:#EA584B;  
+}
+
+._xtab div._xr._grup_ccabs_princpls div._agrup2{
+    height:7.5vh;
+}
+._xtab div._xr ._agrup2 div._xd{
+    height:2.5vh;    
+    background:#FFCC5E; 
+}
+
+}
+/*end responsive mobile*/
+/*--------------------------------------------
+begin responsive tablet*/
+@media screen and (min-width: 800px) and (max-width: 810px)
+{
+
+    ._container._xtab {  
+    padding:2.5vh 2.5vh;
+    }
+    
+/* La especificidad del tag "._container._xtab" header Tiene mas prioridad que la etiqueta <header>! Creo otra definición de tags para ser mas específico
+*/
+
+header._cab_principal{    
+    
+    /*height:8.25vh;*/
+    height:21.25vh;  
+    margin:0vh 0vh;
+    padding:2.5vh 2.5vh 2.5vh 2.5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header._cab_principal > ._celda_cabeceras_principales
+{
+  flex-direction: column;    
+    height:21.25vh;      
+    justify-content: center;
+    align-items: center;    
+}
+
+._xtab div._xr._grup_ccabs_princpls{  
+    height:21.25vh;         
+    justify-content: center;
+    align-items: center;  
+    align-content:space-between;        
+}
+
+._xtab div._xr._grup_ccabs_princpls div._grup_nav{
+   flex-direction: column;
+    width:100%;
+    height:21.25vh; 
+    justify-content:flex-start;
+    align-items:flex-start;
+    align-content:space-between;
+}
+
+header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._nav_agrup1{
+    flex-direction: row;    
+    margin: 2.5vh 0vh 1.25vh 0vh;    
+}
+
+
+._xtab div._xr ._nav_agrup1{    
+    height: 7.5vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*
+ La fila de la tabla que define el primer grupo nav
+*/
+._xtab div._xr nav ._nav_agrup1{    
+    height:7.5vh;    
+}
+
+/*
+hijos de la "AgrupaciónNav", con caracteristicas comunes o diferentes
+*/
+._xtab div._xr ._nav_agrup1 div._xd{
+   width:15%; 
+    height:2.5vh;
+    background:#EA584B; 
+}
+._xtab div._xr ._nav_agrup1 div._logo{   
+    height:2.5vh;
+    background:#EA584B;
+}
+/*
+también es hijo de la "AgrupaciónNav"
+*/
+header._cab_principal nav{   
+    width:55%; 
+    height:2.5vh;
+    background:#EA584B;  
+}
+
+/*
+    -------------
+-------------
+Siguiente fila de header
+*/
+header ._celda_cabeceras_principales div._grup_ccabs_princpls div._grup_nav > ._agrup2{
+}
+
+/*
+
+*/
+._xtab div._xr._grup_ccabs_princpls div._agrup2{
+    height:2.5vh;   
+}
+
+._xtab div._xr._grup_ccabs_princpls div._agrup2{
+    height:7.5vh;
+}
+._xtab div._xr ._agrup2 div._xd{
+    height:2.5vh;    
+    
+}
+
+}
+/*end responsive tablet*/
+
+
+/*begin responsive mobile*/
+@media screen and (min-width: 280px) and (max-width: 512px){
+    
+}
+/*end responsive mobile*/
+
+
+/* -------------
+ -------------
+ -------------
+Sección central: Fila precedente de la tabla del container */
+._xr._prin_inform{
+    flex-direction: row;
+    width:100%;
+    height:72.5vh; /* 10 padding + 40vh _centralsup+22.5vh _centralinf*/
+    padding: 5vh;
+    margin: 5vh 0vh;
+    justify-content: space-around;
+    align-items: center;
+}
+main._prin_inform{          
+    background:black;      
 }
 /* Todas las secciones|tablas hijas de main (superior/inferior) dispuestas en columna con espacio intermedio*/
 main > section._xd._xtab{
     flex-direction: column;
-    justify-content: space-between;
-}
-._xtab div._xr._centralsup{
-    
+    justify-content: space-around;
 }
 section._centralsup{
-    width:100%;
-    height:35vh;    
+    width:75%;
+    height:62.5vh; /* 10 padding + 40vh _centralsup+22.5vh */
     background:#44465E;  
     padding:5vh;
-    margin: 0vh 0vh 5vh 0vh;
+    margin: 0vh 0vh 0vh 0vh;
     
 }
 section._centralinf{
-  width:100%;
-    height:22.5vh;
+  width:20%;
+    height:62.5vh; /* 10 padding + 40vh _centralsup+22.5vh */
     padding:5vh;
     background:#EA584B;        
 }
+
 /*
 Características cómunes de disposición entre estas secciones|filas
 */
@@ -273,11 +478,13 @@ Características cómunes de disposición entre estas secciones|filas
     height:5vh;
     background:#1664A4;
 }
+
 /*Columna resaltada*/
 section._centralsup ._xd._resaltado1{
     width:100%; 
     background:#6399BB;
 }
+
 /*
 Sección central inferior
 */
@@ -293,12 +500,14 @@ Características cómunes de disposición entre estas secciones|filas
     justify-content: space-between;
     align-items: center; 
 }
+
 /* Características cómunes de disposición entre contenido|columnas*/
 ._xr._art2 > ._xd{
     width:100%; 
     height:5vh;
     background:#FFE380;
 }
+
 /*
 
 */
@@ -307,6 +516,158 @@ section._centralinf ._espacioextr{
     padding: 0vh 0vh 2.5vh 0vh;
 }
 
+/*--------------------------------------------
+/*begin responsive mobile*/
+@media screen and (min-width: 280px) and (max-width: 512px){
+    
+._xr._prin_inform{
+    flex-direction:column;
+    width:100%;
+    height:36.25vh; /* 10 padding + 40vh _centralsup+22.5vh _centralinf*/
+    padding: 2.5vh;
+    margin: 2.5vh 0vh;
+    
+    justify-content: space-around;
+    align-items: center;    
+}
+main._prin_inform{          
+    background:yellow;      
+}
+/* Todas las secciones|tablas hijas de main (superior/inferior) dispuestas en columna con espacio intermedio*/
+main > section._xd._xtab{
+    flex-direction: column;
+    justify-content: space-around;
+}
+section._centralsup{    
+    width:100%;
+    height:17.5vh;        
+    padding:2.5vh;
+    margin: 0vh 0vh 2.5vh 0vh;
+    
+}
+section._centralinf{
+    width:100%;
+    height:11.25vh;
+    padding:2.5vh;    
+}
+/*
+Características cómunes de disposición entre estas secciones|filas
+*/
+._xr._art1{
+    height:2.5vh;    
+    /*margin:0vh 5vh 0vh 0vh; */
+    /*padding:0vh 5vh 0vh 5vh;*/
+    justify-content: space-between;
+    align-items: center; 
+}
+/* Características cómunes de disposición entre contenido|columnas*/
+._xr._art1 > ._xd{
+    width:45%; 
+    height:2.5vh;
+    
+}
+
+._xr._art2{
+    height:17.5vh;    
+}
+
+/* Características cómunes de disposición entre contenido|columnas*/
+._xr._art2 > ._xd{
+    height:2.5vh;    
+}
+/*
+
+*/
+section._centralinf ._espacioextr{
+    height: 3.75vh;
+    padding: 0vh 0vh 1.25vh 0vh;
+}
+
+    
+}
+/*end responsive mobile*/
+/*begin responsive tablet*/
+@media screen and (min-width: 800px) and (max-width: 810px){
+
+    /* -------------
+ -------------
+ -------------
+Sección central: Fila precedente de la tabla del container */
+._xr._prin_inform{
+    flex-direction: column;
+    
+    height:36.25vh; /* 10 padding + 40vh _centralsup+22.5vh _centralinf*/
+   
+    justify-content: center;
+    align-items: center;
+}
+    
+main._prin_inform{  
+    /*padding:5vh 5vh 5vh 5vh;*/
+    background:yellow; 
+     margin: 2.5vh 0vh;  
+    padding:2.5vh;
+}
+    
+section._centralsup{
+    width:100%;
+    height:17.5vh;    
+    background:#44465E;  
+    padding:2.5vh;
+    margin: 0vh 0vh 2.5vh 0vh;
+    
+}
+section._centralinf{
+  width:100%;
+    height:11.25vh;
+    padding:2.5vh;
+    background:#EA584B;        
+}
+
+/*
+Características cómunes de disposición entre estas secciones|filas
+*/
+._xr._art1{   
+    justify-content: space-between;
+    height:2.5vh;
+   
+}
+/* Características cómunes de disposición entre contenido|columnas*/
+._xr._art1 > ._xd{ 
+    
+    width: 45%;
+    height:2.5vh;    
+}
+
+/*
+Sección central inferior
+*/
+/*
+Características cómunes de disposición entre estas secciones|filas
+*/
+._xr._art2{   
+    height:17.5vh;
+    
+    
+    
+}
+
+/* Características cómunes de disposición entre contenido|columnas*/
+._xr._art2 > ._xd{
+    width:100%; 
+    height:2.5vh;
+    background:#FFE380;
+}
+
+/*
+
+*/
+section._centralinf ._espacioextr{
+    height: 3.75vh;
+    padding: 0vh 0vh 1.25vh 0vh;
+}
+
+}
 
 /*
 -------------
@@ -324,9 +685,41 @@ footer._piepagprinc{
     align-items: center;   
     background:black;    
 }
-
 footer._piepagprinc div{
     width:100%;
     height:5vh;
     background: #E4A434;
+}
+
+/*end responsive tablet*/
+/*begin responsive mobile*/
+@media screen and (min-width: 280px) and (max-width: 512px)
+{
+
+footer._piepagprinc{
+     height:7.5vh; /* 10 padding + 5vh*/
+    margin: 0vh 0vh;  
+    padding:2.5vh 2.5vh 2.5vh 2.5vh;    
+}    
+    
+footer._piepagprinc div{
+    height:2.5vh;
+    background: #E4A434;
+}
+
+}
+/*end responsive mobile*/
+/*begin responsive tablet*/
+@media screen and (min-width: 800px) and (max-width: 810px){
+
+footer._piepagprinc{    
+    height:7.5vh; /* 10 padding + 5vh*/    
+    padding:2.5vh;    
+}
+    
+
+footer._piepagprinc div{
+    height:1.25vh;    
+}    
+    
 }
